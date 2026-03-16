@@ -1,4 +1,4 @@
-# Webgenai
+# WebGenAI
 
 Small Spring Boot application for "Web Generation Using AI".
 
