@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-# WebGenAI
-=======
+
 # Webgenai
->>>>>>> 45ed07a (API added for Auth, Project, Files, Project Members and Readme Updated)
 
 Small Spring Boot application for "Web Generation Using AI".
 
@@ -55,8 +52,6 @@ Files of interest:
 - Lombok is optional at runtime and excluded from the final fat jar via plugin configuration.
 - Database: change datasource settings in [src/main/resources/application.properties](src/main/resources/application.properties) to point to PostgreSQL for production.
 
-<<<<<<< HEAD
-=======
 ## API (newly added controllers)
 The project now includes REST controllers for authentication, project and file management, and project membership. Main endpoints:
 
@@ -81,7 +76,6 @@ The project now includes REST controllers for authentication, project and file m
 
 These controllers use DTOs located under `src/main/java/com/sagardevlab/webgenai/dto/` and services under `src/main/java/com/sagardevlab/webgenai/service/`.
 
->>>>>>> 45ed07a (API added for Auth, Project, Files, Project Members and Readme Updated)
 ## Contributing
 - Fork and open a pull request. Keep changes small and focused.
 
