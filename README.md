@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # WebGenAI
+=======
+# Webgenai
+>>>>>>> 45ed07a (API added for Auth, Project, Files, Project Members and Readme Updated)
 
 Small Spring Boot application for "Web Generation Using AI".
 
@@ -51,6 +55,33 @@ Files of interest:
 - Lombok is optional at runtime and excluded from the final fat jar via plugin configuration.
 - Database: change datasource settings in [src/main/resources/application.properties](src/main/resources/application.properties) to point to PostgreSQL for production.
 
+<<<<<<< HEAD
+=======
+## API (newly added controllers)
+The project now includes REST controllers for authentication, project and file management, and project membership. Main endpoints:
+
+- **Auth** (`/api/auth`)
+	- `POST /api/auth/signup` — register a new user
+	- `POST /api/auth/login` — authenticate and receive auth response
+	- `GET /api/auth/me` — get current user profile
+
+- **Projects** (`/api/projects`)
+	- `GET /api/projects` — list projects (summary)
+	- `GET /api/projects/{id}` — get project details
+	- `POST /api/projects` — create a project
+	- `DELETE /api/projects/{id}` — delete a project
+
+- **Files** (`/api/projects/{projectId}/files`)
+	- `GET /api/projects/{projectId}/files` — list file nodes for a project
+	- `GET /api/projects/{projectId}/files/{*path}` — get file content by path
+
+- **Project Members** (`/api/projects/{projectId}/members`)
+	- `GET /api/projects/{projectId}/members` — list members of a project
+	- `POST /api/projects/{projectId}/members` — invite/add a member
+
+These controllers use DTOs located under `src/main/java/com/sagardevlab/webgenai/dto/` and services under `src/main/java/com/sagardevlab/webgenai/service/`.
+
+>>>>>>> 45ed07a (API added for Auth, Project, Files, Project Members and Readme Updated)
 ## Contributing
 - Fork and open a pull request. Keep changes small and focused.
 
