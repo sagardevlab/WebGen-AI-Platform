@@ -64,6 +64,7 @@ The project now includes REST controllers for authentication, project and file m
 	- `GET /api/projects` — list projects (summary)
 	- `GET /api/projects/{id}` — get project details
 	- `POST /api/projects` — create a project
+	- `PATCH /api/projects/{id}` — update a project
 	- `DELETE /api/projects/{id}` — delete a project
 
 - **Files** (`/api/projects/{projectId}/files`)
@@ -73,6 +74,18 @@ The project now includes REST controllers for authentication, project and file m
 - **Project Members** (`/api/projects/{projectId}/members`)
 	- `GET /api/projects/{projectId}/members` — list members of a project
 	- `POST /api/projects/{projectId}/members` — invite/add a member
+	- `PATCH /api/projects/{projectId}/members/{memberId}` — update a member's role
+	- `DELETE /api/projects/{projectId}/members/{memberId}` — remove a member from a project
+
+- **Billing / Plans / Subscriptions**
+	- `GET /api/plans` — list available plans
+	- `GET /api/me/subscription` — get current user's subscription
+	- `POST /api/stripe/checkout` — create Stripe checkout session (returns session/url)
+	- `POST /api/stripe/portal` — open Stripe customer portal
+
+- **Usage** (`/api/usage`)
+	- `GET /api/usage/today` — get today's usage for current user
+	- `GET /api/usage/limits` — get current plan limits for current user
 
 These controllers use DTOs located under `src/main/java/com/sagardevlab/webgenai/dto/` and services under `src/main/java/com/sagardevlab/webgenai/service/`.
 
